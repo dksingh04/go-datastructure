@@ -12,6 +12,7 @@ func main() {
 	st.Push(30)
 	st.Push(40)
 	st.Push(50)
+	fmt.Printf("Stack Size: %v \n", st.Size())
 	st.Push(60)
 	st.Print()
 
