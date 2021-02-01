@@ -25,7 +25,7 @@ func (q *Queue) Add(data interface{}) bool {
 func (q *Queue) Remove() interface{} {
 	if !q.isQueueEmpty() {
 		data := q.items[0]
-		q.items = q.items[:-q.pos-1]
+		q.items = q.items[1:]
 		q.pos--
 		return data
 	}
@@ -46,6 +46,11 @@ func (q *Queue) Peek() interface{} {
 //Size of the Queue
 func (q *Queue) Size() int {
 	return q.pos
+}
+
+//Print queue data
+func (q *Queue) Print() {
+	fmt.Println(q.items)
 }
 
 //IsQueueFull function to check, If Queue is full
